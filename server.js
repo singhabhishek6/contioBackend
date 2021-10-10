@@ -36,7 +36,7 @@ app.post("/message", (req, res) => {
 const start = async () => {
   await connect()
 
-  app.listen(1234, (err, res) => {
+  app.listen(process.env.PORT||1234, (err, res) => {
     console.log("listening on port 1234")
   })
 }
